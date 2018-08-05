@@ -1,0 +1,1426 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Baxster Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Bootstrap Core CSS -->
+<link href="/static/css1/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="/static/css1/style.css" rel='stylesheet' type='text/css' />
+<!-- font CSS -->
+<link rel="icon" href="favicon.ico" type="image/x-icon" >
+<!-- font-awesome icons -->
+<link href="/static/css1/font-awesome.css" rel="stylesheet">
+<!-- //font-awesome icons -->
+<!-- chart -->
+<script src="/static/js1/Chart.js"></script>
+<!-- //chart -->
+ <!-- js-->
+<script src="/static/js1/jquery-1.11.1.min.js"></script>
+<script src="/static/js1/modernizr.custom.js"></script>
+<!--webfonts-->
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!--//webfonts--> 
+<!--animate-->
+<link href="/static/css1/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="/static/js1/wow.min.js"></script>
+    <script src="/static/js/echarts.min.js"></script>
+    <script src="/static/js/jquery-1.10.2.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
+<!-- Metis Menu -->
+<script src="/static/js1/metisMenu.min.js"></script>
+<script src="/static/js1/custom.js"></script>
+<link href="/static/css1/custom.css" rel="stylesheet">
+<!--//Metis Menu -->
+</head> 
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+		<!--left-fixed -navigation-->
+
+		<div class="sticky-header header-section ">
+			<div class="header-left">
+				<!--logo -->
+				<div class="logo">
+					<a href="index.html">
+						<ul>	
+							<li><img src="/static/images1/logo1.png" alt="" /></li>
+							<li><h1>病人信息的可视化</h1></li>
+							<div class=""> </div>
+						</ul>
+					</a>
+				</div>
+
+				<!--toggle button start-->
+				<button id="showLeftPush"><i class="fa fa-bars"></i></button>
+				<!--toggle button end-->
+				<div class="clearfix"> </div>				
+			</div>
+			<div class="clearfix"> </div>	
+		</div>
+		<!-- //header-ends -->
+		<!-- main content start-->
+		<div id="page-wrapper">
+			<div class="main-page">
+				<!-- four-grids -->
+				<div class="row four-grids">
+					<div class="col-md-3 ticket-grid">
+						<div class="tickets">
+							<div class="grid-left">
+								<div class="book-icon">
+									<i class="fa fa-book"></i>
+								</div>
+							</div>
+							<div class="grid-right">
+								<h3>病人的人数</h3>
+								<p>217</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="col-md-3 ticket-grid">
+						<div class="tickets">
+							<div class="grid-left">
+								<div class="book-icon">
+									<i class="fa fa-rocket"></i>
+								</div>
+							</div>
+							<div class="grid-right">
+								<h3>男</h3>
+								<p>104</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="col-md-3 ticket-grid">
+						<div class="tickets">
+							<div class="grid-left">
+								<div class="book-icon">
+									<i class="fa fa-bar-chart"></i>
+								</div>
+							</div>
+							<div class="grid-right">
+								<h3>女</h3>
+								<p>113</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="col-md-3 ticket-grid">
+						<div class="tickets">
+							<div class="grid-left">
+								<div class="book-icon">
+									<i class="fa fa-user"></i>
+								</div>
+							</div>
+							<div class="grid-right">
+								<h3>出现的症状数</h3>
+								<p>20</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!-- //four-grids -->
+				<!--row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="panel panel-widget">
+							<div class="panel-title">
+							  病人的综合信息
+							  <ul class="panel-tools">
+								<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+								<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+								<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+							  </ul>
+							</div>
+							<div class="panel-body">
+								<!-- candlestick -->
+                                <div id="example-8"></div>
+								<div id="candlestick" style="width: 700px;height:450px;">
+									<script type="text/javascript">
+									        var myChart = echarts.init(document.getElementById('candlestick'));
+         var dataBJ = {{ list7|safe }};
+
+var dataGZ = {{ list8|safe }};
+var dataSH = {{ list9|safe }};
+
+var schema = [
+    {name: '编号', index: 0, text: '编号'},
+    {name: '症状数', index: 1, text: '症状数'},
+    {name: '性别', index: 2, text: '性别'},
+    {name: '年龄', index: 3, text: '年龄'},
+    {name: '民族', index: 4, text: '民族'},
+    {name: '婚姻', index: 5, text: '婚姻'},
+    {name: '职业', index: 6, text: '职业'}
+];
+
+
+var itemStyle = {
+    normal: {
+        opacity: 0.8,
+        shadowBlur: 10,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowColor: 'rgba(0, 0, 0, 0.5)'
+    }
+};
+
+option = {
+    backgroundColor: '#404a59',
+    color: [
+        '#dd4444', '#fec42c', '#80F1BE'
+    ],
+    legend: {
+        y: 'top',
+        data: ['城北', '城西', '城中'],
+        textStyle: {
+            color: '#fff',
+            fontSize: 16
+        }
+    },
+    grid: {
+        x: '10%',
+        x2: 150,
+        y: '18%',
+        y2: '10%'
+    },
+    tooltip: {
+        padding: 10,
+        backgroundColor: '#222',
+        borderColor: '#777',
+        borderWidth: 1,
+        formatter: function (obj) {
+            var value = obj.value;
+            return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">'
+                + obj.seriesName + ' ' + value[0] + '号患者：'
+                + value[7]
+                + '</div>'
+                + schema[1].text + '：' + value[1] + '<br>'
+                + schema[2].text + '：' + value[2] + '<br>'
+                + schema[3].text + '：' + value[3] + '<br>'
+                + schema[4].text + '：' + value[4] + '<br>'
+                + schema[5].text + '：' + value[5] + '<br>'
+                + schema[6].text + '：' + value[6] + '<br>';
+        }
+    },
+    xAxis: {
+        type: 'value',
+        name: '患者编号',
+        nameGap: 16,
+        nameTextStyle: {
+            color: '#fff',
+            fontSize: 14
+        },
+        max: 77,
+        splitLine: {
+            show: false
+        },
+        axisLine: {
+            lineStyle: {
+                color: '#eee'
+            }
+        }
+    },
+    yAxis: {
+        type: 'value',
+        name: '症状数',
+        nameLocation: 'end',
+        nameGap: 20,
+        nameTextStyle: {
+            color: '#fff',
+            fontSize: 16
+        },
+        axisLine: {
+            lineStyle: {
+                color: '#eee'
+            }
+        },
+        splitLine: {
+            show: false
+        }
+    },
+    visualMap: [
+        {
+            left: 'right',
+            top: '10%',
+            dimension: 1,
+            min: 0,
+            max: 20,
+            itemWidth: 30,
+            itemHeight: 120,
+            calculable: true,
+            precision: 0.1,
+            text: ['圆形大小：症状数'],
+            textGap: 30,
+            textStyle: {
+                color: '#fff'
+            },
+            inRange: {
+                symbolSize: [10, 70]
+            },
+            outOfRange: {
+                symbolSize: [10, 70],
+                color: ['rgba(255,255,255,.2)']
+            },
+            controller: {
+                inRange: {
+                    color: ['#c23531']
+                },
+                outOfRange: {
+                    color: ['#444']
+                }
+            }
+        },
+        {
+            left: 'right',
+            bottom: '5%',
+            dimension: 3,
+            min: 0,
+            max: 100,
+            itemHeight: 120,
+            calculable: true,
+            precision: 0.1,
+            text: ['明暗：年龄'],
+            textGap: 30,
+            textStyle: {
+                color: '#fff'
+            },
+            inRange: {
+                colorLightness: [1, 0.5]
+            },
+            outOfRange: {
+                color: ['rgba(255,255,255,.2)']
+            },
+            controller: {
+                inRange: {
+                    color: ['#c23531']
+                },
+                outOfRange: {
+                    color: ['#444']
+                }
+            }
+        }
+    ],
+    series: [
+        {
+            name: '城北',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: dataBJ
+        },
+        {
+            name: '城中',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: dataSH
+        },
+        {
+            name: '城西',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: dataGZ
+        }
+    ]
+};
+        myChart.setOption(option);
+									</script>
+
+								</div>
+								<!-- //candlestick -->
+							</div>
+						</div>
+					</div>
+					<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
+					
+					<div class="col-md-6">
+						<div class="panel panel-widget">
+							<div class="panel-title">
+							  症状在病人中的占比
+							  <ul class="panel-tools">
+								<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+								<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+								<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+							  </ul>
+							</div>
+							<div class="panel-body">
+								<div id="lines-points" style="width: 750px;height:500px;">
+									<div id="example-4"></div>
+									<script type="text/javascript">
+                                        var myChart = echarts.init(document.getElementById('lines-points'));
+                                        var data1 = {{ list10|safe }};
+                                        var data2 = {{ list11|safe }};
+									 option = {
+    title: {
+        text: '漏斗图',
+        subtext: '纯属虚构',
+        left: 'left',
+        top: 'bottom'
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c}%"
+    },
+    toolbox: {
+        orient: 'vertical',
+        top: 'center',
+        feature: {
+            dataView: {readOnly: false},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data: data1,
+    },
+    calculable: true,
+    series: [
+        {
+            name: '漏斗图',
+            type: 'funnel',
+            width: '40%',
+            height: '45%',
+            left: '10%',
+            top: '50%',
+            data:data2
+        },
+        {
+            name: '金字塔',
+            type: 'funnel',
+            width: '40%',
+            height: '45%',
+            left: '10%',
+            top: '5%',
+            sort: 'ascending',
+            data:data2
+        },
+        {
+            name: '漏斗图',
+            type:'funnel',
+            width: '40%',
+            height: '45%',
+            left: '55%',
+            top: '5%',
+            label: {
+                normal: {
+                    position: 'left'
+                }
+            },
+            data:data2
+        },
+        {
+            name: '金字塔',
+            type:'funnel',
+            width: '40%',
+            height: '45%',
+            left: '55%',
+            top: '50%',
+            sort: 'ascending',
+            label: {
+                normal: {
+                    position: 'left'
+                }
+            },
+            data:data2
+        }
+    ]
+};
+									 myChart.setOption(option);
+
+									</script>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!--//row-->
+				<!--row-->
+				<div class="row">
+					<div class="col-md-7">
+						<div class="panel panel-widget">
+							<div class="panel-title">
+							  基于apriori算法产生的规则
+							  <ul class="panel-tools">
+								<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+								<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+								<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+							  </ul>
+							</div>
+							<div class="panel-body">
+								<div class="demo-container" style="width: 700px;height:450px;">
+                                     <table style="width: 700px;height:450px;font-size:16px;align:center"  class="table table-striped table-hover table-bordered">
+            <thead>
+            <tr class = "success">
+                <th colspan="3">apriori产生的规则</th>
+            </tr>
+                <tr class = "danger">
+                    <th>前验</th>
+                    <th>后验</th>
+                    <th>置信度</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class = "success">
+                    <td width="35%">{{list1.0 }}</td>
+                    <td>{{list1.1 }}</td>
+                    <td>{{list1.2 }}</td>
+                </tr>
+                <tr class = "info">
+                    <td>{{list1.3 }}</td>
+                    <td>{{list1.4 }}</td>
+                    <td>{{list1.5 }}</td>
+                </tr>
+                <tr class = "warning">
+                    <td>{{list1.6 }}</td>
+                    <td>{{list1.7 }}</td>
+                    <td>{{list1.8 }}</td>
+                </tr>
+                <tr class = "info">
+                    <td>{{list1.9 }}</td>
+                    <td>{{list1.10 }}</td>
+                    <td>{{list1.11 }}</td>
+                </tr>
+                <tr class = "active">
+                    <td>{{list1.12 }}</td>
+                    <td>{{list1.13 }}</td>
+                    <td>{{list1.14 }}</td>
+                </tr>
+                    <tr class = "danger">
+                    <td>{{list1.15 }}</td>
+                    <td>{{list1.16 }}</td>
+                    <td>{{list1.17 }}</td>
+                </tr>
+                <tr class = "warning">
+                    <td>{{list1.18 }}</td>
+                    <td>{{list1.19 }}</td>
+                    <td>{{list1.20 }}</td>
+                </tr>
+                <tr class = "info">
+                    <td>{{list1.21 }}</td>
+                    <td>{{list1.22 }}</td>
+                    <td>{{list1.23 }}</td>
+                </tr>
+                </tbody>
+        </table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="panel panel-widget">
+							<div class="panel-title">
+							  基于apriori算法产生的候选项集
+							  <ul class="panel-tools">
+								<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+								<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+								<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+							  </ul>
+							</div>
+							<div class="panel-body">
+								<div id="demo-container" style="width: 750px;height:450px;">
+                                    <script type="text/javascript">
+                                        var list12 = {{ list12|safe }}
+                                        var list13 = {{ list13|safe }}
+                                        var myChart = echarts.init(document.getElementById('demo-container'));
+									option = {
+    title: {
+        text: '候选项集'
+    },
+    tooltip: {},
+    legend: {
+        data:['候选项集大小']
+    },
+    xAxis: {
+        data: list12,
+         axisLabel:{
+                         interval:8,//横轴信息全部显示
+                         rotate:-20,//-30度角倾斜显示
+                    }
+    },
+    yAxis: {},
+    series: [{
+        name: '候选项集大小',
+        type: 'bar',
+        data: list13,
+    },
+        {
+            name:'频繁项集筛选线',
+            type:'line',
+            //data:[0],
+            markLine: {
+                name:'aa',
+                 lineStyle: {
+                            type: 'dotted line',
+                            color:'blue',
+                            width:2
+                        },
+                data: [[
+                    {coord:["Hp2",0.5]},
+                    {coord:["baozhangY,shiyubuzhenY,shaoxinY",0.5]}
+                ]]
+            }
+        }
+    ]
+};
+									 myChart.setOption(option);
+									</script>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+				<!--//row-->
+				<!--row-->
+				<div class="row">
+					<div class="col-md-5 program-grid">
+						<div class="panel panel-widget">
+							<div class="panel-title">
+							  病人的职业占比
+							  <ul class="panel-tools">
+								<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+								<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+								<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+							  </ul>
+							</div>
+							<div class="panel-body">
+								<div id="content" style="width: 700px;height:450px;">
+									<script type="text/javascript">
+                                        var myChart = echarts.init(document.getElementById('content'));
+                                        option = {
+    backgroundColor: '#2c343c',
+
+    title: {
+        text: '病人职业',
+        left: 'center',
+        top: 20,
+        textStyle: {
+            color: '#ccc'
+        }
+    },
+
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+
+    visualMap: {
+        show: false,
+        min: 1,
+        max: 150,
+        inRange: {
+            colorLightness: [0, 1]
+        }
+    },
+    series : [
+        {
+            name:'病人职业',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value:73, name:'农民'},
+                {value:4, name:'僧人'},
+                {value:30, name:'干部'},
+                {value:96, name:'牧民'},
+                {value:1, name:'医生'},
+                {value:3, name:'教师'}
+            ].sort(function (a, b) { return a.value - b.value; }),
+            roseType: 'radius',
+            label: {
+                normal: {
+                    textStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    },
+                    smooth: 0.2,
+                    length: 10,
+                    length2: 20
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: '#c23531',
+                    shadowBlur: 200,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+
+            animationType: 'scale',
+            animationEasing: 'elasticOut',
+            animationDelay: function (idx) {
+                return Math.random() * 200;
+            }
+        }
+    ]
+};
+                                        myChart.setOption(option);
+                                        </script>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7 monthly-grid">
+						<div class="panel panel-widget">
+							<div class="panel-title">
+							  Monthly Status Report
+							  <ul class="panel-tools">
+								<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+								<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+								<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+							  </ul>
+							</div>
+							<div class="panel-body">
+								<!-- status -->
+								<div class="contain">
+									<div class="gantt"></div>
+								</div>
+								<!-- status -->
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!--//row-->
+			</div>
+		</div>
+		<!--footer-->
+		 <div class="dev-page">
+	 
+			<!-- page footer -->   
+			<!-- dev-page-footer-closed dev-page-footer-fixed -->
+            <div class="dev-page-footer dev-page-footer-fixed"> 
+				<!-- container -->
+				<div class="container">
+					<div class="copyright">
+						<p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p> 
+					</div>
+					<!-- page footer buttons -->
+					<ul class="dev-page-footer-buttons">                    
+						<li><a href="#footer_content_1" class="dev-page-footer-container-open"><span class="glyphicon glyphicon glyphicon-sort" aria-hidden="true"></span></a></li>                    
+						<li><a href="#footer_content_2" class="dev-page-footer-container-open"><span class="glyphicon glyphicon glyphicon-signal" aria-hidden="true"></span></a></li>
+						<li><a href="#footer_content_3" class="dev-page-footer-container-open"><span class="glyphicon glyphicon glyphicon glyphicon-file" aria-hidden="true"></span></a></li>
+					</ul>
+					<!-- //page footer buttons -->
+					<!-- page footer container -->
+					<div class="dev-page-footer-container">
+						
+						<!-- loader and close button -->
+						<div class="dev-page-footer-container-layer">
+							<a href="#" class="dev-page-footer-container-layer-button"></a>
+						</div>
+						<!-- //loader and close button -->                    
+						
+						<!-- informers -->
+						<div class="dev-page-footer-container-content" id="footer_content_1">                        
+							<div class="block-hdnews">
+								  <div class="list-wrpaaer" style="height:200px;">
+									 <ul class="list-aggregate" id="marquee-horizontal">
+									   <li class="fat-l" style="width:300px">
+										<a href="#">Lorem ipsum dolor</a>
+										<p>
+										   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.										
+										 </p>
+									   </li>
+									   
+									   <li class="fat-l" style="width:300px">
+										<a href="#">Consectetur</a>
+										<p>
+										   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.										
+										 </p>
+									   </li>
+									   
+									   <li class="fat-l" style="width:300px">
+										 <a href="#">Adipiscing elit</a>
+										 <p>
+										   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.										
+										 </p>
+									   </li>
+
+									   <li class="fat-l" style="width:300px">
+										<a href="#">Lorem ipsum dolor</a>
+										 <p>
+										   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.										
+										 </p>
+									   </li>
+										<li class="fat-l" style="width:300px">
+										<a href="#">Consectetur</a>
+										 <p>
+										   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.										
+										 </p>
+									   </li>
+									   
+									   <li class="fat-l" style="width:300px">
+										 <a href="#">Adipiscing elit</a>
+										 <p>
+										   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.										
+										 </p>
+									   </li>
+
+									 </ul>
+								  </div><!-- list-wrpaaer -->
+
+							  </div> <!-- block-hdnews -->
+
+						<script type="text/javascript">
+						  
+						  $(function(){
+
+
+						  $('#marquee-vertical').marquee();  
+						  $('#marquee-horizontal').marquee({direction:'horizontal', delay:0, timing:50});  
+
+						});
+
+						</script>                   
+						</div>
+						<!-- //informers -->
+						
+						<!-- informers -->
+						<div class="dev-page-footer-container-content" id="footer_content_2">   
+							<div class="graphs">
+								<div class="col-md-4 graph-points">
+									<div class="graph-left">
+									   <script type="text/javascript">
+										  // Generate data
+										  
+										  var data = [];
+										  
+										  var time = new Date('Dec 1, 2013 12:00').valueOf();
+										  
+										  var h = Math.floor(Math.random() * 100);
+										  var l = h - Math.floor(Math.random() * 20);
+										  var o = h - Math.floor(Math.random() * (h - l));
+										  var c = h - Math.floor(Math.random() * (h - l));
+
+										  var v = Math.floor(Math.random() * 1000);
+										  
+										  for (var i = 0; i < 30; i++) {
+											data.push([time, o, h, l, c, v]);
+											h += Math.floor(Math.random() * 10 - 5);
+											l = h - Math.floor(Math.random() * 20);
+											o = h - Math.floor(Math.random() * (h - l));
+											c = h - Math.floor(Math.random() * (h - l));
+											v += Math.floor(Math.random() * 100 - 50);
+											time += 30 * 60000; // Add 30 minutes
+										  }
+										</script>
+										<div id="example-1"></div>
+										<script type="text/javascript">
+										  $(function() {
+											$('#example-1').jqCandlestick({
+											  data: data,
+											  theme: 'light',
+											  series: [{
+											  }],
+											});
+										  });
+										</script>
+									</div>
+									<div class="graph-right">
+										<h3>TODAY'S STATS</h3>
+										<p>Duis aute irure dolor in reprehenderit.</p>
+										<ul>
+											<li>Earning: $400 USD</li>
+											<li>Items Sold: 20 Items</li>
+											<li>Last Hour Sales: $34 USD</li>
+										</ul>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="col-md-4 bar-grid">
+									<div class="graph-left">
+										<canvas id="line"></canvas>
+											<script>
+													var lineChartData = {
+														labels : ["Mon","Tue","Wed","Thu","Fri","Sat","Mon"],
+														datasets : [
+															{
+																fillColor : "rgba(202, 202, 202, 0)",
+																strokeColor : "#3E495A",
+																pointColor : "#fbfbfb",
+																pointStrokeColor : "#fbfbfb",
+																data : [20,35,45,30,10,65,40]
+															}
+														]
+														
+													};
+													new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);
+											</script>
+									</div>
+									<div class="graph-right">
+										<h3>TODAY'S STATS</h3>
+										<p>Duis aute irure dolor in reprehenderit.</p>
+										<ul>
+											<li>Earning: $400 USD</li>
+											<li>Items Sold: 20 Items</li>
+											<li>Last Hour Sales: $34 USD</li>
+										</ul>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="col-md-4 switch-right">
+									<div class="graph-left">
+										<canvas id="bar"></canvas>
+											<script>
+												var barChartData = {
+													labels : ["Mon","Tue","Wed","Thu","Fri","Sat","Mon","Tue","Wed","Thu"],
+													datasets : [
+														{
+															fillColor : "#fbc02d",
+															strokeColor : "#fbc02d",
+															highlightFill: "rgba(220,220,220,0.75)",
+															highlightStroke: "rgba(220,220,220,1)",
+															data : [25,40,50,65,55,30,20,10,6,4]
+														},
+														{
+															fillColor : "#3E495A",
+															strokeColor : "#3E495A",
+															data : [30,45,55,70,40,25,15,8,5,2]
+														}
+													]
+													
+												};
+													new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
+											</script>
+									</div>
+									<div class="graph-right">
+										<h3>TODAY'S STATS</h3>
+										<p>Duis aute irure dolor in reprehenderit.</p>
+										<ul>
+											<li>Earning: $400 USD</li>
+											<li>Items Sold: 20 Items</li>
+											<li>Last Hour Sales: $34 USD</li>
+										</ul>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<!-- //informers -->
+						
+						<!-- projects -->
+						<div class="dev-page-footer-container-content" id="footer_content_3">                        
+							<div class="social">
+								<div class="col-md-3 top-comment-grid">
+									<div class="comments">
+										<div class="comments-icon">
+											<i class="fa fa-comments"></i>
+										</div>
+										<div class="comments-info">
+											<h3>85</h3>
+											<a href="#">Comments</a>
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+								<div class="col-md-3 top-comment-grid">
+									<div class="comments likes">
+										<div class="comments-icon">
+											<i class="fa fa-facebook"></i>
+										</div>
+										<div class="comments-info likes-info">
+											<h3>2150</h3>
+											<a href="#">Likes</a>
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+								<div class="col-md-3 top-comment-grid">
+									<div class="comments tweets">
+										<div class="comments-icon">
+											<i class="fa fa-twitter"></i>
+										</div>
+										<div class="comments-info tweets-info">
+											<h3>325</h3>
+											<a href="#">Tweets</a>
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+								<div class="col-md-3 top-comment-grid">
+									<div class="comments views">
+										<div class="comments-icon">
+											<i class="fa fa-eye"></i>
+										</div>
+										<div class="comments-info views-info">
+											<h3>471</h3>
+											<a href="#">Views</a>
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<!-- //projects -->
+					</div>
+                <!-- //page footer container -->
+                
+                </div>
+				<!-- //container -->
+            </div>
+            <!-- /page footer -->
+		</div>
+        <!--//footer-->
+	</div>
+	<!-- Classie -->
+		<script src="/static/js1/classie.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				body = document.body;
+				
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			};
+			
+
+			function disableOther( button ) {
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				}
+			}
+		</script>
+	<!-- Bootstrap Core JavaScript --> 
+		
+        <script type="text/javascript" src="/static/js1/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="/static/js1/dev-loaders.js"></script>
+        <script type="text/javascript" src="/static/js1/dev-layout-default.js"></script>
+		<script type="text/javascript" src="/static/js1/jquery.marquee.js"></script>
+		<link href="/static/css1/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- candlestick -->
+		<script type="text/javascript" src="/static/js1/jquery.jqcandlestick.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/static/css1/jqcandlestick.css" />
+		<!-- //candlestick -->
+		
+		<!--max-plugin-->
+		<script type="text/javascript" src="/static/js1/plugins.js"></script>
+		<!--//max-plugin-->
+		
+		<!--scrolling js-->
+		<script src="/static/js1/jquery.nicescroll.js"></script>
+		<script src="/static/js1/scripts.js"></script>
+		<!--//scrolling js-->
+		
+		<!-- real-time-updates -->
+		<script language="javascript" type="text/javascript" src="/static/js1/jquery.flot.js"></script>
+		<script type="text/javascript">
+
+		$(function() {
+
+			// We use an inline data source in the example, usually data would
+			// be fetched from a server
+
+			var data = [],
+				totalPoints = 300;
+
+			function getRandomData() {
+
+				if (data.length > 0)
+					data = data.slice(1);
+
+				// Do a random walk
+
+				while (data.length < totalPoints) {
+
+					var prev = data.length > 0 ? data[data.length - 1] : 50,
+						y = prev + Math.random() * 10 - 5;
+
+					if (y < 0) {
+						y = 0;
+					} else if (y > 100) {
+						y = 100;
+					}
+
+					data.push(y);
+				}
+
+				// Zip the generated y values with the x values
+
+				var res = [];
+				for (var i = 0; i < data.length; ++i) {
+					res.push([i, data[i]])
+				}
+
+				return res;
+			}
+
+			// Set up the control widget
+
+			var updateInterval = 30;
+			$("#updateInterval").val(updateInterval).change(function () {
+				var v = $(this).val();
+				if (v && !isNaN(+v)) {
+					updateInterval = +v;
+					if (updateInterval < 1) {
+						updateInterval = 1;
+					} else if (updateInterval > 2000) {
+						updateInterval = 2000;
+					}
+					$(this).val("" + updateInterval);
+				}
+			});
+
+			var plot = $.plot("#placeholder", [ getRandomData() ], {
+				series: {
+					shadowSize: 0	// Drawing is faster without shadows
+				},
+				yaxis: {
+					min: 0,
+					max: 100
+				},
+				xaxis: {
+					show: false
+				}
+			});
+
+			function update() {
+
+				plot.setData([getRandomData()]);
+
+				// Since the axes don't change, we don't need to call plot.setupGrid()
+
+				plot.draw();
+				setTimeout(update, updateInterval);
+			}
+
+			update();
+
+			// Add the Flot version string to the footer
+
+			$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
+		});
+
+		</script>
+		<!-- //real-time-updates -->
+		<!-- error-graph -->
+		<script language="javascript" type="text/javascript" src="/static/js1/jquery.flot.errorbars.js"></script>
+		<script language="javascript" type="text/javascript" src="/static/js1/jquery.flot.navigate.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				function drawArrow(ctx, x, y, radius){
+					ctx.beginPath();
+					ctx.moveTo(x + radius, y + radius);
+					ctx.lineTo(x, y);
+					ctx.lineTo(x - radius, y + radius);
+					ctx.stroke();
+				}
+
+				function drawSemiCircle(ctx, x, y, radius){
+					ctx.beginPath();
+					ctx.arc(x, y, radius, 0, Math.PI, false);
+					ctx.moveTo(x - radius, y);
+					ctx.lineTo(x + radius, y);
+					ctx.stroke();
+				}
+
+				var data1 = [
+					[1,1,.5,.1,.3],
+					[2,2,.3,.5,.2],
+					[3,3,.9,.5,.2],
+					[1.5,-.05,.5,.1,.3],
+					[3.15,1.,.5,.1,.3],
+					[2.5,-1.,.5,.1,.3]
+				];
+
+				var data1_points = {
+					show: true,
+					radius: 5,
+					fillColor: "blue", 
+					errorbars: "xy", 
+					xerr: {show: true, asymmetric: true, upperCap: "-", lowerCap: "-"}, 
+					yerr: {show: true, color: "red", upperCap: "-"}
+				};
+
+				var data2 = [
+					[.7,3,.2,.4],
+					[1.5,2.2,.3,.4],
+					[2.3,1,.5,.2]
+				];
+
+				var data2_points = {
+					show: true,
+					radius: 5,
+					errorbars: "y", 
+					yerr: {show:true, asymmetric:true, upperCap: drawArrow, lowerCap: drawSemiCircle}
+				};
+
+				var data3 = [
+					[1,2,.4],
+					[2,0.5,.3],
+					[2.7,2,.5]
+				];
+
+				var data3_points = {
+					//do not show points
+					radius: 0,
+					errorbars: "y", 
+					yerr: {show:true, upperCap: "-", lowerCap: "-", radius: 5}
+				};
+
+				var data4 = [
+					[1.3, 1],
+					[1.75, 2.5],
+					[2.5, 0.5]
+				];
+
+				var data4_errors = [0.1, 0.4, 0.2];
+				for (var i = 0; i < data4.length; i++) {
+					data4_errors[i] = data4[i].concat(data4_errors[i])
+				}
+
+				var data = [
+					{color: "blue", points: data1_points, data: data1, label: "data1"}, 
+					{color: "red",  points: data2_points, data: data2, label: "data2"},
+					{color: "green", lines: {show: true}, points: data3_points, data: data3, label: "data3"},
+					// bars with errors
+					{color: "orange", bars: {show: true, align: "center", barWidth: 0.25}, data: data4, label: "data4"},
+					{color: "orange", points: data3_points, data: data4_errors}
+				];
+
+				$.plot($("#placeholder1"), data , {
+					legend: {
+						position: "sw",
+						show: true
+					},
+					series: {
+						lines: {
+							show: false
+						}
+					},
+					xaxis: {
+						min: 0.6,
+						max: 3.1
+					},
+					yaxis: {
+						min: 0,
+						max: 3.5
+					},
+					zoom: {
+						interactive: true
+					},
+					pan: {
+						interactive: true
+					}
+				});
+
+				// Add the Flot version string to the footer
+
+				$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
+			});
+
+			</script>
+		<!-- //error-graph -->
+		<!-- Skills-graph -->
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js'></script> 
+		<script>
+		var programmingSkills = [
+			{
+				value: 20,
+				label: 'jQuery',
+				color: '#3399FF'
+			},
+			{
+				value: 23,
+				label: 'JavaScript',
+				color: '#FFC575'
+			},
+			{
+				value: 17,
+				label: 'Ruby',
+				color: '#99CC00'
+			},
+			{
+				value: 22,
+				label: 'Python',
+				color: '#FF3300'
+			},
+			{
+				value: 18,
+				label: 'CSS3',
+				color: '#944DDB'
+			},
+		];
+		</script> 
+		<script src="/static/js1/svg-donut-chart-framework.js"></script>
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-36251023-1']);
+		  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		<!-- //Skills-graph -->
+		<!-- status -->
+		<script src="/static/js1/jquery.fn.gantt.js"></script>
+		<script>
+
+			$(function() {
+
+				"use strict";
+
+				$(".gantt").gantt({
+					source: [{
+						name: "Sprint 0",
+						desc: "Analysis",
+						values: [{
+							from: "/Date(1320192000000)/",
+							to: "/Date(1322401600000)/",
+							label: "Requirement Gathering", 
+							customClass: "ganttRed"
+						}]
+					},{
+						name: " ",
+						desc: "Scoping",
+						values: [{
+							from: "/Date(1322611200000)/",
+							to: "/Date(1323302400000)/",
+							label: "Scoping", 
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Sprint 1",
+						desc: "Development",
+						values: [{
+							from: "/Date(1323802400000)/",
+							to: "/Date(1325685200000)/",
+							label: "Development", 
+							customClass: "ganttGreen"
+						}]
+					},{
+						name: " ",
+						desc: "Showcasing",
+						values: [{
+							from: "/Date(1325685200000)/",
+							to: "/Date(1325695200000)/",
+							label: "Showcasing", 
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sprint 2",
+						desc: "Development",
+						values: [{
+							from: "/Date(1326785200000)/",
+							to: "/Date(1325785200000)/",
+							label: "Development", 
+							customClass: "ganttGreen"
+						}]
+					},{
+						name: " ",
+						desc: "Showcasing",
+						values: [{
+							from: "/Date(1328785200000)/",
+							to: "/Date(1328905200000)/",
+							label: "Showcasing", 
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Release Stage",
+						desc: "Training",
+						values: [{
+							from: "/Date(1330011200000)/",
+							to: "/Date(1336611200000)/",
+							label: "Training", 
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: " ",
+						desc: "Deployment",
+						values: [{
+							from: "/Date(1336611200000)/",
+							to: "/Date(1338711200000)/",
+							label: "Deployment", 
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: " ",
+						desc: "Warranty Period",
+						values: [{
+							from: "/Date(1336611200000)/",
+							to: "/Date(1349711200000)/",
+							label: "Warranty Period", 
+							customClass: "ganttOrange"
+						}]
+					}],
+					navigate: "scroll",
+					scale: "weeks",
+					maxScale: "months",
+					minScale: "days",
+					itemsPerPage: 10,
+					onItemClick: function(data) {
+						alert("Item clicked - show some details");
+					},
+					onAddClick: function(dt, rowId) {
+						alert("Empty space clicked - add an item!");
+					},
+					onRender: function() {
+						if (window.console && typeof console.log === "function") {
+							console.log("chart rendered");
+						}
+					}
+				});
+
+				$(".gantt").popover({
+					selector: ".bar",
+					title: "I'm a popover",
+					content: "And I'm the content of said popover.",
+					trigger: "hover"
+				});
+
+				prettyPrint();
+
+			});
+
+
+
+
+		</script>
+		<!-- //status -->
+		
+</body>
+</html>
